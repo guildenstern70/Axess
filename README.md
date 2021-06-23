@@ -1,24 +1,19 @@
-# README
+# Axess
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
-Things you may want to cover:
+Axess is an online paste service.
 
-* Ruby version
+It is an application written in Ruby (3.0.x) on Rails (6.1.x).
+It uses SQLite as database and Bootstrap as Rensponsive UI library.
 
-* System dependencies
+### Prepare for production
 
-* Configuration
+    rails assets:precompile
 
-* Database creation
+and then
+    
+    ruby rails server -e production
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    
