@@ -5,3 +5,6 @@ Documentation:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Layout/TrailingWhitespace:
+  Enabled: false

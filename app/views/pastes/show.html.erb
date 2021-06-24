@@ -1,0 +1,14 @@
+<% content_for :content do %>
+
+  <h1>The Axess</h1>
+  <p class="lead text-warning">Paste text</p>
+  <div class="mb-3">
+    <label for="pasteText" class="form-label"><b><%= @paste.title %></b></label>
+    <textarea class="form-control font-monospace" id="pasteText" rows="14" readonly><%= @paste.body %></textarea>
+  </div>
+  <p class="lead">
+    <a href="/" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Back</a>
+  </p>
+
+<% end %>
+

@@ -15,5 +15,21 @@ and then
     
     ruby rails server -e production
 
+### Initialize DB
 
+Only if the database does not exits:
+
+    rake db:create
+
+Normally:
+
+    rake db:migrate
+
+Load initial data:
+
+    rake db:seed
+
+Rollback db
+
+    rake db:rollback
     

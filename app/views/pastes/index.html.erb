@@ -1,0 +1,14 @@
+<% content_for :content do %>
+
+  <h1>The Axess</h1>
+  <p class="lead text-warning">Older pastes</p>
+  <ul class="list-group">
+    <% @pastes.each do |paste| %>
+      <li class="list-group-item">
+        <a href="/pastes/<%= paste.id %>"><%= paste.title %></a>
+      </li>
+    <% end %>
+  </ul>
+
+
+<% end %>
