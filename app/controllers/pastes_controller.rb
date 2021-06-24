@@ -15,4 +15,24 @@ class PastesController < ApplicationController
     @paste = Paste.find(params[:id])
   end
 
+  def new
+    @paste = Paste.new
+  end
+
+  def create
+    @paste = Paste.new(self.article_params)
+
+    if @paste.save
+      redirect_to @paste
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def article_params
+    params.require(:paste).permit(:title, :body)
+  end
+
 end

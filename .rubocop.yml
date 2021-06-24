@@ -8,3 +8,7 @@ Style/FrozenStringLiteralComment:
 
 Layout/TrailingWhitespace:
   Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+

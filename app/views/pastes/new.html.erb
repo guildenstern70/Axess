@@ -1,0 +1,26 @@
+<% content_for :content do %>
+
+  <h1>The Axess</h1>
+  <p class="lead text-warning">Fast remote copy paste</p>
+
+  <%= bootstrap_form_for @paste do |f| %>
+    <div class="mb-3">
+    <%= f.text_field :title, placeholder: 'Your title', required: true,
+                     label_class: "form-label", control_class: "form-control font-monospace" %>
+    </div>
+    <% @paste.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <div class="mb-3">
+    <%= f.text_area :body, placeholder: 'Your paste', required: true,
+                    control_class: "form-control font-monospace textarea-axs" %>
+    </div>
+    <p class="lead">
+      <%= f.submit "Save", class: "btn btn-lg btn-secondary fw-bold border-white bg-white"  %>
+    </p>
+    <% @paste.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  <%end%>
+
+<% end %>

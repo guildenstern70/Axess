@@ -7,10 +7,9 @@
 #
 Rails.application.routes.draw do
 
-  get '/pastes', to: 'pastes#index'
-  get '/pastes/:id', to: 'pastes#show'
-  
+  resources :pastes
+
   get '/welcome', to: 'welcome#index'
-  root 'welcome#index'
+  root 'pastes#new'
 
 end
