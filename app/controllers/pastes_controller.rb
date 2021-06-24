@@ -22,7 +22,16 @@ class PastesController < ApplicationController
   def create
     @paste = Paste.new(self.article_params)
 
+    nr_of_pastes = Paste.count
+    logger.info "Number of pastes = #{nr_of_pastes}"
+
     if @paste.save
+      if nr_of_pastes > 6
+        logger.info 'Number of pastes is > 6.'
+        id_to_delete = Paste.first.id
+        logger.info "Deleting ID == #{id_to_delete}"
+        Paste.find(id_to_delete).destroy
+      end
       redirect_to @paste
     else
       render :new

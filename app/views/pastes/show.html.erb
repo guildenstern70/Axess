@@ -1,10 +1,25 @@
+<% content_for :javascripts do %>
+  <%= javascript_pack_tag 'pastes' %>
+<% end %>
+
 <% content_for :content do %>
 
   <h1>The Axess</h1>
   <p class="lead text-warning">Paste text</p>
   <div class="mb-3">
     <label for="pasteText" class="form-label"><b><%= @paste.title %></b></label>
-    <textarea class="form-control font-monospace" id="pasteText" rows="14" readonly><%= @paste.body %></textarea>
+    <textarea class="form-control font-monospace"
+              id="pasteText" rows="14" readonly><%= @paste.body %></textarea>
+    <div class="d-flex flex-row-reverse">
+      <button id="clipcopy" type="button"
+              class="mt-1 btn btn-info fw-bold border-white bg-white"
+              aria-label="Clipboard Copy"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right" title="Clipboard copy"
+      >
+        <i class="bi bi-clipboard-plus"></i>
+      </button>
+    </div>
   </div>
   <p class="lead">
     <a href="/" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Back</a>
