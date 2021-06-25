@@ -7,6 +7,13 @@ Axess is an online paste service.
 It is an application written in Ruby (3.0.x) on Rails (6.1.x).
 It uses SQLite as database and Bootstrap as Rensponsive UI library.
 
+### Docker
+
+Build docker image
+
+    docker build -f Dockerfile -t guildenstern70/axess:1.0 .
+    docker run -p 8080:8080 guildenstern70/axess:1.0
+
 ### Prepare for production
 
     rails assets:precompile

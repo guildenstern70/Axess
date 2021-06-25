@@ -17,8 +17,6 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# Rubocop
-gem 'rubocop-rails', require: false
 # Use Bootstrap forms
 gem 'bootstrap_form', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
@@ -30,6 +28,8 @@ group :development, :test do
 end
 
 group :development do
+  # Rubocop
+  gem 'rubocop-rails', require: false
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
